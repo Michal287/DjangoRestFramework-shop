@@ -1,0 +1,284 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+    position: relative;
+
+}
+
+#root {
+    height: 100%;
+}
+
+.box {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100%;
+}
+
+/*Header*/
+
+.navbar {
+    box-shadow: none !important;
+    background-color: white;
+}
+
+.nav-btn-search {
+    color: black;
+    border-color: black ;
+}
+
+.nav-btn-search:hover {
+    background-color: #f7f7f7;
+    border-color: black ;
+}
+
+.navbar a{
+    color: black;
+}
+
+/*Filter Box*/
+
+.filer-box {
+    float: left;
+    height: 100%;
+    width: 14%;
+    background-color: white;
+    font-size: 1vw;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.filer-box article {
+    width: 100%;
+}
+
+/*Product List*/
+
+.card-product {
+    margin-left: 25px;
+    margin-top: 25px;
+    padding: 0;
+    height: 430px;
+    width: 235px;
+    position: relative;
+}
+
+.card-product .card-text {
+    min-height: 110px;
+}
+
+.card-list {
+    background-color: #f7f7f7;
+    width: 86%;
+    float: left;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-box-shadow: inset 0 0 12px -1px rgba(0,0,0,0.18);
+    -moz-box-shadow: inset 0 0 12px -1px rgba(0,0,0,0.18);
+    box-shadow: inset 0 0 12px -1px rgba(0,0,0,0.18);
+    margin-left: 0 !important;
+    padding-bottom: 25px;
+}
+
+/*Footer*/
+
+.footer {
+    padding: 20px;
+    width: 100%;
+    float: left;
+    position: relative;
+    background-color: white;
+    bottom: 0;
+
+}
+
+.footer a:link {
+  color: black;
+  font-size: 12px;
+}
+
+.footer-nav{
+    width: 60%;
+    float: left;
+}
+
+.footer-social{
+    width: auto;
+    float: right;
+}
+
+/*Delete scroll bar*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*Login*/
+
+.login {
+    overflow-x: hidden;
+    width: 100%;
+    float: left;
+    height: -webkit-calc(100% - 130px);
+}
+
+.login .card {
+    float: none;
+    margin: 5% auto 10px;
+    height: 500px;
+    width: 400px;
+    position: relative;
+
+}
+
+
+/*Cart*/
+
+.cart {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    height: -webkit-calc(100% - 130px);
+}
+
+.cart .card-product {
+    width: 900px;
+    height: 250px;
+    margin: 20px 0 0 0;
+    display: block !important;
+}
+
+.cart .card-product .card-image{
+    background: url('../../images/zaza.jpg') no-repeat;
+    background-size:contain;
+    height: 250px;
+    object-fit: cover;
+}
+
+.cart .cart-image-box {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.cart .cart-text-box {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.cart .card-title {
+    min-height: 160px;
+    text-align: left;
+    font-size: 27px;
+    width: 60%;
+}
+
+.cart .card-title .card-text {
+    margin-top: 20px !important;
+    max-height: 90px !important;
+    min-height: 0 !important;
+    width: 300px;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+
+}
+
+.cart-details {
+    margin: 20px 0 0 20px;
+    height: 470px;
+    float: left;
+    width: 300px;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.cart-details .cart-text-box{
+    width: 100%;
+}
+
+/*Detail-page*/
+
+.detail-page {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    float: left;
+    height: -webkit-calc(100% - 130px);
+}
+
+.detail-page .card-image{
+    height: 500px;
+}
+
+
+.detail-page .card-title {
+    min-height: 160px;
+    text-align: left;
+    font-size: 27px;
+    width: 60%;
+}
+
+.detail-page .card-title .card-text {
+    margin-top: 20px !important;
+    max-height: 90px !important;
+    min-height: 0 !important;
+    width: 300px;
+}
+
+.cart-details .cart-text-box{
+    width: 100%;
+}
+
+.detail-page .nav-link {
+    color: #9e9e9e !important;
+    padding: 0 10px 0 0;
+    float: left;
+}
+
+

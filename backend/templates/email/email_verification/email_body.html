@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .email-body {
+            height: 100%;
+            width: 100%;
+            background-color: #9e9e9e;
+            text-align: center;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <header><h3>Hi, {{ user }}</h3></header>
+
+    <br>
+    <br>
+
+    <section class="email-body">
+        Please click on the link to confirm your registration,
+        {{ protocol }}://{{ domain }}/user-verify/?token={{ token }}
+    </section>
+
+    <footer>Good bye!</footer>
+
+</body>
+</html>
