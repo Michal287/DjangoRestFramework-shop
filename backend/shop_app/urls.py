@@ -1,5 +1,7 @@
 from rest_framework import routers
 from .views.views_auth import UserViewSet, RegisterView, EmailVerifyView, RequestPasswordResetView, PasswordResetView
+from .views.views_products import ProductViewSet, CategoryViewSet
+from .views.views_cart import CartViewSet
 from django.urls import path
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -19,5 +21,10 @@ urlpatterns = [
 router = routers.SimpleRouter()
 
 router.register(r'user', UserViewSet)
+router.register(r'product', ProductViewSet)
+router.register(r'category', CategoryViewSet)
+router.register(r'cart', CartViewSet, basename='cart')
+# router.register(r'order', OrderViewSet)
+
 
 urlpatterns += router.urls
