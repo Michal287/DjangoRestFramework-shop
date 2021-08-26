@@ -2,7 +2,6 @@ from ..serializers.serializers_cart import CartSerializer
 from ..serializers.serializers_products import ProductSerializer
 from rest_framework.viewsets import ViewSet
 from rest_framework.decorators import action
-from django.core.exceptions import ObjectDoesNotExist
 from django.http import JsonResponse
 from ..cart import Cart
 from rest_framework.response import Response
@@ -33,15 +32,12 @@ class CartViewSet(ViewSet):
                 else:
                     cart.add(data['product_id'])
 
-                return Response(status=status.HTTP_200_OK)
+                return Response(status=status.HTTP_201_CREATED)
 
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
         except ValueError as err:
             return Response({f'error: {err}'}, status=status.HTTP_400_BAD_REQUEST)
-
-        except ObjectDoesNotExist:
-            return Response({f'error: Product not exist'}, status=status.HTTP_400_BAD_REQUEST)
 
     def destroy(self, request, pk=None):
         cart = Cart(request)
