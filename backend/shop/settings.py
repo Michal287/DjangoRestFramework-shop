@@ -147,8 +147,8 @@ REST_FRAMEWORK = {
 
 ANYMAIL = {
     "AMAZON_SES_CLIENT_PARAMS": {
-        "aws_access_key_id": "AKIA54MKFAR7JLUCKQTL",
-        "aws_secret_access_key": "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",
+        "aws_access_key_id": "",
+        "aws_secret_access_key": "",
         "region_name": "eu-central-1",
     },
 }
