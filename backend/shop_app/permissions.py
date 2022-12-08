@@ -26,3 +26,12 @@ class IsOwner(BasePermission):
         return obj == request.user
 
 
+class IsSeller(BasePermission):
+    message = 'This page is not allowed.'
+
+    def has_object_permission(self, request, view, obj):
+        if request.user.user_type in ['Admin', 'Seller'] or request.user.is_superuser:
+            return True
+        return False
+
+

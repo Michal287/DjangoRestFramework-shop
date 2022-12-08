@@ -140,8 +140,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media/')
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
+    ),
 }
+
+# SESSION
+
+CART_SESSION_ID = 'cart'
 
 # EMAIL
 
